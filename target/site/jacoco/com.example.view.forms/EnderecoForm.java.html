@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EnderecoForm.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-de-judocas</a> &gt; <a href="index.source.html" class="el_package">com.example.view.forms</a> &gt; <span class="el_source">EnderecoForm.java</span></div><h1>EnderecoForm.java</h1><pre class="source lang-java linenums">//package org.fpij.jitakyoei.view.forms;
+
+package com.example.view.forms;
+
+import com.example.model.beans.Endereco;
+import com.example.view.gui.EnderecoPanel;
+
+//import org.fpij.jitakyoei.model.beans.Endereco;
+//import org.fpij.jitakyoei.view.gui.EnderecoPanel;
+
+public class EnderecoForm {
+	private Endereco endereco;
+	private EnderecoPanel enderecoPanel;
+
+	/**
+	 * Contrutor padrão que recebe somente EnderecoPanel. Um novo Endereco será
+	 * instanciado.
+	 * 
+	 * @param enderecoPanel
+	 * @param endereco
+	 */
+	public EnderecoForm(EnderecoPanel enderecoPanel) {
+<span class="nc" id="L23">		this(enderecoPanel, new Endereco());</span>
+<span class="nc" id="L24">	}</span>
+
+	/**
+	 * Contrutor que recebe um EnderecoPanel e um endereco. O EnderecoPanel será
+	 * iniciado com os valores do Endereco passado por parâmetro.
+	 * 
+	 * @param enderecoPanel
+	 * @param endereco
+	 */
+<span class="nc" id="L33">	public EnderecoForm(EnderecoPanel enderecoPanel, Endereco endereco) {</span>
+<span class="nc" id="L34">		this.enderecoPanel = enderecoPanel;</span>
+<span class="nc" id="L35">		this.setEndereco(endereco);</span>
+<span class="nc" id="L36">	}</span>
+
+	/**
+	 * Retorna um endereço com os valores atualizados da GUI.
+	 * 
+	 * @return endereco
+	 */
+	public Endereco getEndereco() {
+<span class="nc" id="L44">		endereco.setBairro(getBairro());</span>
+<span class="nc" id="L45">		endereco.setCep(getCep());</span>
+<span class="nc" id="L46">		endereco.setCidade(getCidade());</span>
+<span class="nc" id="L47">		endereco.setEstado(getEstado());</span>
+<span class="nc" id="L48">		endereco.setNumero(getNumero());</span>
+<span class="nc" id="L49">		endereco.setRua(getRua());</span>
+<span class="nc" id="L50">		return endereco;</span>
+	}
+
+	/**
+	 * Atualiza a GUI com endereço passado no parâmetro.
+	 * 
+	 * @param endereco
+	 */
+	public void setEndereco(Endereco endereco) {
+<span class="nc" id="L59">		this.endereco = endereco;</span>
+<span class="nc" id="L60">		setRua(endereco.getRua());</span>
+<span class="nc" id="L61">		setNumero(endereco.getNumero());</span>
+<span class="nc" id="L62">		setBairro(endereco.getBairro());</span>
+<span class="nc" id="L63">		setCidade(endereco.getCidade());</span>
+<span class="nc" id="L64">		setEstado(endereco.getEstado());</span>
+<span class="nc" id="L65">		setCep(endereco.getCep());</span>
+<span class="nc" id="L66">	}</span>
+
+	/* Métodos de acesso aos valores da GUI */
+	public String getRua() {
+<span class="nc" id="L70">		return enderecoPanel.getRua().getText();</span>
+	}
+
+	public String getNumero() {
+<span class="nc" id="L74">		return enderecoPanel.getNumero().getText();</span>
+	}
+
+	public String getBairro() {
+<span class="nc" id="L78">		return enderecoPanel.getBairro().getText();</span>
+	}
+
+	public String getCidade() {
+<span class="nc" id="L82">		return enderecoPanel.getCidade().getText();</span>
+	}
+
+	public String getEstado() {
+<span class="nc" id="L86">		return enderecoPanel.getEstado().getText();</span>
+	}
+
+	public String getCep() {
+<span class="nc" id="L90">		return enderecoPanel.getCep().getText();</span>
+	}
+
+	/* Métodos modificadores da GUI */
+	private void setCep(String cep) {
+<span class="nc" id="L95">		enderecoPanel.getCep().setText(cep);</span>
+<span class="nc" id="L96">	}</span>
+
+	private void setEstado(String estado) {
+<span class="nc" id="L99">		enderecoPanel.getEstado().setText(estado);</span>
+<span class="nc" id="L100">	}</span>
+
+	private void setCidade(String cidade) {
+<span class="nc" id="L103">		enderecoPanel.getCidade().setText(cidade);</span>
+<span class="nc" id="L104">	}</span>
+
+	private void setBairro(String bairro) {
+<span class="nc" id="L107">		enderecoPanel.getBairro().setText(bairro);</span>
+<span class="nc" id="L108">	}</span>
+
+	private void setNumero(String numero) {
+<span class="nc" id="L111">		enderecoPanel.getNumero().setText(numero);</span>
+<span class="nc" id="L112">	}</span>
+
+	private void setRua(String rua) {
+<span class="nc" id="L115">		enderecoPanel.getRua().setText(rua);</span>
+<span class="nc" id="L116">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

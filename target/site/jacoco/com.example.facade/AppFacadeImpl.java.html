@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AppFacadeImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-de-judocas</a> &gt; <a href="index.source.html" class="el_package">com.example.facade</a> &gt; <span class="el_source">AppFacadeImpl.java</span></div><h1>AppFacadeImpl.java</h1><pre class="source lang-java linenums">package com.example.facade;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+import com.example.business.AlunoBO;
+import com.example.business.AlunoBOImpl;
+import com.example.business.EntidadeBO;
+import com.example.business.EntidadeBOImpl;
+import com.example.business.ProfessorBO;
+import com.example.business.ProfessorBOImpl;
+import com.example.model.beans.Aluno;
+import com.example.model.beans.Entidade;
+import com.example.model.beans.Professor;
+import com.example.model.beans.ProfessorEntidade;
+import com.example.business.ProfessorEntidadeBO;
+import com.example.business.ProfessorEntidadeBOImpl;
+import  com.example.view.AppView;
+
+import com.example.model.*;
+import  com.example.view.*;
+//import com.example.model.business.AlunoBO;
+//import org.fpij.jitakyoei.business.AlunoBOImpl;
+//import org.fpij.jitakyoei.business.EntidadeBO;
+//import org.fpij.jitakyoei.business.EntidadeBOImpl;
+//import org.fpij.jitakyoei.business.ProfessorBO;
+//import org.fpij.jitakyoei.business.ProfessorBOImpl;
+//import org.fpij.jitakyoei.business.ProfessorEntidadeBO;
+//import org.fpij.jitakyoei.business.ProfessorEntidadeBOImpl;
+//import org.fpij.jitakyoei.model.beans.Aluno;
+//import org.fpij.jitakyoei.model.beans.Entidade;
+//import org.fpij.jitakyoei.model.beans.Professor;
+//import org.fpij.jitakyoei.model.beans.ProfessorEntidade;
+//import org.fpij.jitakyoei.view.AppView;
+
+public class AppFacadeImpl implements AppFacade {
+	
+	private AppView view;
+	private AlunoBO alunoBO;
+	private ProfessorBO professorBO;
+	private EntidadeBO entidadeBO;
+	private ProfessorEntidadeBO professorEntidadeBO;
+	
+<span class="nc" id="L46">	public AppFacadeImpl(AppView view) {</span>
+<span class="nc" id="L47">		this.view = view;</span>
+<span class="nc" id="L48">		this.alunoBO = new AlunoBOImpl(view);</span>
+<span class="nc" id="L49">		this.professorBO = new ProfessorBOImpl(view);</span>
+<span class="nc" id="L50">		this.entidadeBO = new EntidadeBOImpl(view);</span>
+<span class="nc" id="L51">		this.professorEntidadeBO = new ProfessorEntidadeBOImpl(view);</span>
+<span class="nc" id="L52">	}</span>
+
+	private void reportException(Exception e){
+<span class="nc" id="L55">		view.displayException(e);</span>
+<span class="nc" id="L56">	}</span>
+	
+	@Override
+	public void createAluno(Aluno aluno) {
+<span class="nc" id="L60">		System.out.println(&quot;AppFacadeImpl.createAluno()&quot;);</span>
+		try{
+<span class="nc" id="L62">			alunoBO.createAluno(aluno);</span>
+<span class="nc" id="L63">		}catch (Exception e) {</span>
+<span class="nc" id="L64">			reportException(e);</span>
+<span class="nc" id="L65">		}</span>
+<span class="nc" id="L66">	}</span>
+
+	@Override
+	public void updateAluno(Aluno aluno) {
+		try{
+<span class="nc" id="L71">			alunoBO.updateAluno(aluno);</span>
+<span class="nc" id="L72">		}catch (Exception e) {</span>
+<span class="nc" id="L73">			reportException(e);</span>
+<span class="nc" id="L74">		}</span>
+<span class="nc" id="L75">	}</span>
+
+	@Override
+	public List&lt;Aluno&gt; searchAluno(Aluno aluno) {
+<span class="nc" id="L79">		List&lt;Aluno&gt; result = new ArrayList&lt;Aluno&gt;();</span>
+		try{
+<span class="nc" id="L81">			result = alunoBO.searchAluno(aluno);</span>
+<span class="nc" id="L82">		}catch (Exception e) {</span>
+<span class="nc" id="L83">			reportException(e);</span>
+<span class="nc" id="L84">		}</span>
+<span class="nc" id="L85">		return result;</span>
+	}
+
+	@Override
+	public void listAlunos() {
+		try{
+<span class="nc" id="L91">			alunoBO.listAll();</span>
+<span class="nc" id="L92">		}catch (Exception e) {</span>
+<span class="nc" id="L93">			reportException(e);</span>
+<span class="nc" id="L94">		}</span>
+<span class="nc" id="L95">	}</span>
+
+	@Override
+	public void createProfessor(Professor professor) {
+		try{
+<span class="nc" id="L100">			professorBO.createProfessor(professor);</span>
+<span class="nc" id="L101">		}catch (Exception e) {</span>
+<span class="nc" id="L102">			JOptionPane.showMessageDialog(null, e.getMessage());</span>
+<span class="nc" id="L103">			reportException(e);</span>
+<span class="nc" id="L104">		}		</span>
+<span class="nc" id="L105">	}</span>
+
+	@Override
+	public List&lt;Professor&gt; listProfessores() {
+<span class="nc" id="L109">		List&lt;Professor&gt; result = null;</span>
+		try{
+<span class="nc" id="L111">			result = professorBO.listAll();</span>
+<span class="nc" id="L112">		}catch (Exception e) {</span>
+<span class="nc" id="L113">			reportException(e);</span>
+<span class="nc" id="L114">		}</span>
+<span class="nc" id="L115">		return result;</span>
+	}
+
+	@Override
+	public List&lt;Professor&gt; searchProfessor(Professor professor) {
+<span class="nc" id="L120">		List&lt;Professor&gt; result = null;</span>
+		try{
+<span class="nc" id="L122">			result = professorBO.searchProfessor(professor);</span>
+<span class="nc" id="L123">		}catch (Exception e) {</span>
+<span class="nc" id="L124">			reportException(e);</span>
+<span class="nc" id="L125">		}</span>
+<span class="nc" id="L126">		return result;</span>
+	}
+
+	@Override
+	public void updateProfessor(Professor professor) {
+		try{
+<span class="nc" id="L132">			professorBO.updateProfessor(professor);</span>
+<span class="nc" id="L133">		}catch (Exception e) {</span>
+<span class="nc" id="L134">			reportException(e);</span>
+<span class="nc" id="L135">		}</span>
+<span class="nc" id="L136">	}</span>
+
+	@Override
+	public void createEntidade(Entidade entidade) {
+		try{
+<span class="nc" id="L141">			entidadeBO.createEntidade(entidade);</span>
+<span class="nc" id="L142">		}catch (Exception e) {</span>
+<span class="nc" id="L143">			reportException(e);</span>
+<span class="nc" id="L144">		}</span>
+<span class="nc" id="L145">	}</span>
+
+	@Override
+	public List&lt;Entidade&gt; listEntidade() {
+<span class="nc" id="L149">		List&lt;Entidade&gt; result = null;</span>
+		try{
+<span class="nc" id="L151">			result = entidadeBO.listAll();</span>
+<span class="nc" id="L152">		}catch (Exception e) {</span>
+<span class="nc" id="L153">			reportException(e);</span>
+<span class="nc" id="L154">		}</span>
+<span class="nc" id="L155">		return result; </span>
+	}
+
+	@Override
+	public List&lt;Entidade&gt; searchEntidade(Entidade entidade) {
+<span class="nc" id="L160">		List&lt;Entidade&gt; result = null;</span>
+		try{
+<span class="nc" id="L162">			result = entidadeBO.searchEntidade(entidade);</span>
+<span class="nc" id="L163">		}catch (Exception e) {</span>
+<span class="nc" id="L164">			reportException(e);</span>
+<span class="nc" id="L165">		}</span>
+<span class="nc" id="L166">		return result;</span>
+	}
+
+	@Override
+	public void updateEntidade(Entidade entidade) {
+		try{
+<span class="nc" id="L172">			entidadeBO.updateEntidade(entidade);</span>
+<span class="nc" id="L173">		}catch (Exception e) {</span>
+<span class="nc" id="L174">			reportException(e);</span>
+<span class="nc" id="L175">		}</span>
+<span class="nc" id="L176">	}</span>
+
+	@Override
+	public void createProfessorEntidade(List&lt;ProfessorEntidade&gt; relacionamentos) {
+		try{
+<span class="nc" id="L181">			professorEntidadeBO.createProfessorEntidade(relacionamentos);</span>
+<span class="nc" id="L182">		}catch (Exception e) {</span>
+<span class="nc" id="L183">			reportException(e);</span>
+<span class="nc" id="L184">		}</span>
+<span class="nc" id="L185">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
