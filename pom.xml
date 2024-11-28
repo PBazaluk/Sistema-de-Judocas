@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>sistema-de-judocas</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>sistema-de-judocas</name>
+
+  <properties>
+    <!-- Define a codificação UTF-8 para o projeto -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Definindo o Java 8 como a versão do compilador -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jcalendar</groupId>
+      <artifactId>jcalendar</artifactId>
+      <version>1.3.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>db4o</groupId>
+      <artifactId>db4o</artifactId>
+      <version>7.4.106.13438-java5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>forms</groupId>
+      <artifactId>forms</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>genesis.backport175</groupId>
+      <artifactId>backport</artifactId>
+      <version>175-1.1.RC1-snapshot</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.7</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>commons-digester</artifactId>
+      <version>1.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>commons-validator</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>jakarta-oro</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.commons</groupId>
+      <artifactId>reusable-components</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.script</groupId>
+      <artifactId>bsh</artifactId>
+      <version>2.0b4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.script</groupId>
+      <artifactId>commons-el</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.script</groupId>
+      <artifactId>commons-jxpath</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.script</groupId>
+      <artifactId>jakarta-taglibs-standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis.script</groupId>
+      <artifactId>js</artifactId>
+      <version>1.6R5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-annotation</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-aspect</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-aspect-annotated</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-client</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-client-swing</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-client-swt</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-client-thinlet</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-container</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-server</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-shared</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>genesis</groupId>
+      <artifactId>genesis-shared-annotated</artifactId>
+      <version>3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>TableLayout-javadoc</groupId>
+      <artifactId>TableLayout-javadoc</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>TableLayout-src</groupId>
+      <artifactId>TableLayout-src</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>TableLayout</groupId>
+      <artifactId>TableLayout</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>PgsLookAndFeel</groupId>
+      <artifactId>PgsLookAndFeel</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <!-- Plugin para limpar o projeto -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- Plugin para manipulação de recursos -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <!-- Plugin para compilação do código -->
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <!-- Plugin para execução de testes -->
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <!-- Plugin para empacotamento em JAR -->
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <!-- Plugin para instalar o artefato no repositório local -->
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <!-- Plugin para deploy -->
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- Plugin para gerar o site do projeto -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <!-- Plugin para relatórios do projeto -->
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
