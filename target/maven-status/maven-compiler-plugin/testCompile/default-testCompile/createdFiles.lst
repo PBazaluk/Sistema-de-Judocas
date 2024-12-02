@@ -1,2 +1,4 @@
-com\example\AppTest.class
-test\java\com\example\dao\AlunoDaoTest.class
+com\example\model\dao\AlunoDaoTest.class
+test\java\com\example\ModelIntegrationTests.class
+com\example\model\dao\EntidadeDaoTest.class
+com\example\model\dao\ProfessorDaoTest.class

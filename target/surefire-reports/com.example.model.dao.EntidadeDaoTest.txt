@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.example.model.dao.EntidadeDaoTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in com.example.model.dao.EntidadeDaoTest
+SearchEntidadeTest(com.example.model.dao.EntidadeDaoTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at com.example.model.dao.EntidadeDaoTest.SearchEntidadeTest(EntidadeDaoTest.java:122)
+
