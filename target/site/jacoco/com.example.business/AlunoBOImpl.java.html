@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AlunoBOImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-de-judocas</a> &gt; <a href="index.source.html" class="el_package">com.example.business</a> &gt; <span class="el_source">AlunoBOImpl.java</span></div><h1>AlunoBOImpl.java</h1><pre class="source lang-java linenums">package com.example.business;
+
+import java.util.List;
+import com.example.model.beans.Aluno;
+import com.example.model.dao.DAO;
+import com.example.model.dao.DAOImpl;
+import com.example.util.FiliadoID;
+import com.example.view.AppView;
+import com.example.model.*;
+import com.example.util.*;
+import  com.example.view.*;
+//import org.fpij.jitakyoei.model.beans.Aluno;
+//import org.fpij.jitakyoei.model.dao.DAO;
+//import org.fpij.jitakyoei.model.dao.DAOImpl;
+//import org.fpij.jitakyoei.util.FiliadoID;
+//import org.fpij.jitakyoei.view.AppView;
+
+public class AlunoBOImpl implements AlunoBO {
+<span class="nc" id="L19">	private static DAO&lt;Aluno&gt; dao = new DAOImpl&lt;Aluno&gt;(Aluno.class);</span>
+	private AppView view;
+
+<span class="nc" id="L22">	public AlunoBOImpl(AppView view) {</span>
+<span class="nc" id="L23">		this.view = view;</span>
+<span class="nc" id="L24">	}</span>
+
+	private void fireModelChangeEvent(Aluno aluno) {
+<span class="nc" id="L27">		view.handleModelChange(aluno);</span>
+<span class="nc" id="L28">	}</span>
+
+	@Override
+	public void createAluno(Aluno aluno) throws Exception {
+<span class="nc" id="L32">		System.out.println(&quot;AlunoBOImpl.createAluno()&quot;);</span>
+		try {
+<span class="nc" id="L34">			aluno.getFiliado().setId(FiliadoID.getNextID());</span>
+<span class="nc" id="L35">			dao.save(aluno);</span>
+<span class="nc" id="L36">			fireModelChangeEvent(aluno);</span>
+<span class="nc" id="L37">		} catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L38">			throw new IllegalArgumentException( &quot;Ocorreu um erro ao cadastrar o aluno!&quot;</span>
+				+ &quot; Verifique se todos os dados foram preenchidos corretamente.&quot;);
+<span class="nc" id="L40">		} catch (Exception e) {</span>
+<span class="nc" id="L41">			e.printStackTrace();</span>
+<span class="nc" id="L42">			throw new Exception(&quot;Desculpe, ocorreu um erro desconhecido ao salvar o aluno.&quot;);</span>
+<span class="nc" id="L43">		}</span>
+<span class="nc" id="L44">	}</span>
+
+	@Override
+	public void updateAluno(Aluno aluno) throws Exception{
+		try {
+<span class="nc" id="L49">			Aluno old = null;</span>
+<span class="nc" id="L50">			old = dao.get(aluno);</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">			if(old!=null){		</span>
+<span class="nc" id="L52">				old.copyProperties(aluno);</span>
+			}
+<span class="nc" id="L54">			fireModelChangeEvent(old);</span>
+<span class="nc" id="L55">		} catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L56">			e.printStackTrace();</span>
+<span class="nc" id="L57">			throw new IllegalArgumentException( &quot;Ocorreu um erro ao salvar os dados do aluno.&quot;</span>
+				+ &quot; Verifique se todos os dados foram preenchidos corretamente!&quot;);
+<span class="nc" id="L59">		} catch (Exception e) {</span>
+<span class="nc" id="L60">			e.printStackTrace();</span>
+<span class="nc" id="L61">			throw new Exception(&quot;Desculpe, ocorreu um erro desconhecido ao salvar o aluno.&quot;);</span>
+<span class="nc" id="L62">		}</span>
+<span class="nc" id="L63">	}</span>
+	
+	
+
+	@Override
+	public List&lt;Aluno&gt; searchAluno(Aluno aluno) throws Exception {
+		List&lt;Aluno&gt; result;
+		try {
+<span class="nc" id="L71">			result = dao.search(aluno);</span>
+<span class="nc" id="L72">		} catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L73">			throw new IllegalArgumentException(&quot;Ocorreu um erro ao salvar os dados do aluno.&quot;</span>
+				+ &quot; Verifique se todos os dados foram preenchidos corretamente!&quot;);
+<span class="nc" id="L75">		} catch (Exception e) {</span>
+<span class="nc" id="L76">			e.printStackTrace();</span>
+<span class="nc" id="L77">			throw new Exception(&quot;Desculpe, ocorreu um erro desconhecido ao buscar os aluno.&quot;);</span>
+<span class="nc" id="L78">		}</span>
+<span class="nc" id="L79">		return result;</span>
+	}
+
+	@Override
+	public List&lt;Aluno&gt; listAll() throws Exception {
+		List&lt;Aluno&gt; result;
+		try {
+<span class="nc" id="L86">			result = dao.list();</span>
+<span class="nc" id="L87">		} catch (IllegalArgumentException e) {</span>
+<span class="nc" id="L88">			throw new IllegalArgumentException(&quot;Ocorreu um erro ao obter a lista de alunos.&quot;</span>
+				+ &quot; Verifique se todos os dados foram preenchidos corretamente!&quot;);
+<span class="nc" id="L90">		} catch (Exception e) {</span>
+<span class="nc" id="L91">			e.printStackTrace();</span>
+<span class="nc" id="L92">			throw new Exception(&quot;Desculpe, ocorreu um erro desconhecido o obter a lista de alunos.&quot;);</span>
+<span class="nc" id="L93">		}</span>
+<span class="nc" id="L94">		return result;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

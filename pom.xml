@@ -209,8 +209,17 @@
   </dependencies>
 
   <build>
-    <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+            <mainClass>com.example.util.Main</mainClass>
+            <arguments>
+            </arguments>
+          </configuration>
+        </plugin>
         <!-- Plugin para limpar o projeto -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -257,6 +266,14 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
-    </pluginManagement>
+    
+    <resources>
+      <resource>
+        <directory>src/main/java/com/example/icones/icon_16x16</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java/com/example/icones/icon_32x32</directory>
+      </resource>
+    </resources>
   </build>
 </project>
