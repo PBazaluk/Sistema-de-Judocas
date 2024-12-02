@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.model.dao.EntidadeDaoTest" time="0.005" tests="3" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.model.dao.EntidadeDaoTest" time="0.008" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\pbmvi\AppData\Local\Temp\surefire1338968973939346655\surefirebooter4421429542371012459.jar C:\Users\pbmvi\AppData\Local\Temp\surefire1338968973939346655 2024-12-01T22-44-16_131-jvmRun1 surefire8001175173052084869tmp surefire_08229058118158751185tmp"/>
+    <property name="sun.java.command" value="C:\Users\pbmvi\AppData\Local\Temp\surefire2900420184602847062\surefirebooter1765210219348260524.jar C:\Users\pbmvi\AppData\Local\Temp\surefire2900420184602847062 2024-12-01T22-54-23_335-jvmRun1 surefire8970257371504094838tmp surefire_03919595240400573594tmp"/>
     <property name="surefire.test.class.path" value="P:\GitHub\Sistema-de-Judocas\target\test-classes;P:\GitHub\Sistema-de-Judocas\target\classes;C:\Users\pbmvi\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\pbmvi\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\pbmvi\.m2\repository\jcalendar\jcalendar\1.3.3\jcalendar-1.3.3.jar;C:\Users\pbmvi\.m2\repository\db4o\db4o\7.4.106.13438-java5\db4o-7.4.106.13438-java5.jar;C:\Users\pbmvi\.m2\repository\forms\forms\1.0\forms-1.0.jar;C:\Users\pbmvi\.m2\repository\genesis\backport175\backport\175-1.1.RC1-snapshot\backport-175-1.1.RC1-snapshot.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\commons-beanutils\1.7\commons-beanutils-1.7.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\commons-digester\1.8\commons-digester-1.8.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\commons-logging\1.1\commons-logging-1.1.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\commons-validator\1.3.1\commons-validator-1.3.1.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\jakarta-oro\2.0.8\jakarta-oro-2.0.8.jar;C:\Users\pbmvi\.m2\repository\genesis\commons\reusable-components\1.3.1\reusable-components-1.3.1.jar;C:\Users\pbmvi\.m2\repository\genesis\script\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\pbmvi\.m2\repository\genesis\script\commons-el\1.0\commons-el-1.0.jar;C:\Users\pbmvi\.m2\repository\genesis\script\commons-jxpath\1.2\commons-jxpath-1.2.jar;C:\Users\pbmvi\.m2\repository\genesis\script\jakarta-taglibs-standard\1.1.2\jakarta-taglibs-standard-1.1.2.jar;C:\Users\pbmvi\.m2\repository\genesis\script\js\1.6R5\js-1.6R5.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-annotation\3.2\genesis-annotation-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-aspect\3.2\genesis-aspect-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-aspect-annotated\3.2\genesis-aspect-annotated-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-client\3.2\genesis-client-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-client-swing\3.2\genesis-client-swing-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-client-swt\3.2\genesis-client-swt-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-client-thinlet\3.2\genesis-client-thinlet-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-container\3.2\genesis-container-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-server\3.2\genesis-server-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-shared\3.2\genesis-shared-3.2.jar;C:\Users\pbmvi\.m2\repository\genesis\genesis-shared-annotated\3.2\genesis-shared-annotated-3.2.jar;C:\Users\pbmvi\.m2\repository\TableLayout-javadoc\TableLayout-javadoc\1.0\TableLayout-javadoc-1.0.jar;C:\Users\pbmvi\.m2\repository\TableLayout-src\TableLayout-src\1.0\TableLayout-src-1.0.jar;C:\Users\pbmvi\.m2\repository\TableLayout\TableLayout\1.0\TableLayout-1.0.jar;C:\Users\pbmvi\.m2\repository\PgsLookAndFeel\PgsLookAndFeel\1.0\PgsLookAndFeel-1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\pbmvi"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\pbmvi\AppData\Local\Temp\surefire1338968973939346655\surefirebooter4421429542371012459.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\pbmvi\AppData\Local\Temp\surefire2900420184602847062\surefirebooter1765210219348260524.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\resources.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\rt.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\sunrsasign.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\jsse.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\jce.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\charsets.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\lib\jfr.jar;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,14 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="SalvarEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0.001"/>
-  <testcase name="updateEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0.001"/>
-  <testcase name="SearchEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0.003">
-    <failure message="expected:&lt;1&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<0>
-	at com.example.model.dao.EntidadeDaoTest.SearchEntidadeTest(EntidadeDaoTest.java:122)
-]]></failure>
-    <system-out><![CDATA[DAOImpl.save()
-TesteUpdateEntidade
-]]></system-out>
-  </testcase>
+  <testcase name="SalvarEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0"/>
+  <testcase name="updateEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0.004"/>
+  <testcase name="SearchEntidadeTest" classname="com.example.model.dao.EntidadeDaoTest" time="0.004"/>
 </testsuite>

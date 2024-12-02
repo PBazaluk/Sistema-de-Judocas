@@ -107,6 +107,7 @@ public class EntidadeDaoTest {
 		Entidade e2 = entidadeDao.get(e1);
 		assertEquals("TesteUpdateEntidade", e2.getNome());
 		assertEquals(1, entidadeDao.list().size());
+		clearDatabase();
 	}
 	
 	@Test
@@ -116,7 +117,7 @@ public class EntidadeDaoTest {
 		entidadeDao.save(entidade);
 		
 		Entidade e = new Entidade();
-		e.setNome("Academia 1");
+		e.setTelefone1("(086)1234-5432");
 
 		List<Entidade> result = entidadeDao.search(e);
 		assertEquals(1, result.size());
